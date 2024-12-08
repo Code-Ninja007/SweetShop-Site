@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Grandma's Sweet Shop | Checkout Cart</title>
+  <style>
+    /* Checkout Section Custom Styles */
+    /* ... Your existing CSS styles ... */
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg px-4">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="Grandma's Sweet Shop"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+        <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Checkout Section -->
+  <section class="checkout py-5" id="checkout">
+    <div class="container">
+      <h1 class="text-capitalize">Your <strong class="banner-title">Shopping Cart</strong></h1>
+
+      <div class="checkout-item__container" id="cart-items-container">
+        <!-- Checkout Items will be dynamically added here -->
+      </div>
+
+      <div class="checkout-summary">
+        <h3>Summary</h3>
+        <div class="total">
+          <span>Total:</span>
+          <span id="total-price">$0.00</span>
+        </div>
+        <button class="btn-checkout" onclick="proceedToCheckout()">Proceed to Checkout</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center py-4">
+      <p>&copy; 2024 Grandma's Sweet Shop. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <title>Grandma's Sweet Shop | Explore Our Items</title>
+  <style>
+    /* Explore Section Custom Styles */
+    .explore {
+      padding: 5rem 0;
+      background-color: #f8f9fa;
+    }
+
+    .explore h1 {
+      font-size: 3rem;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .explore .banner-title {
+      color: #e85965;
+    }
+
+    .explore p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #bbeb10;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .explore p:hover {
+      color: #343a40;
+      font-size: 1.25rem;
+    }
+
+    .explore-item__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px; /* Spacing between grid items */
+    }
+
+    .explore-item {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 30%;
+      height: 350px; /* Set a fixed height for uniformity */
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .explore-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures uniform aspect ratio */
+      border-radius: 15px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .explore-item:hover {
+      transform: scale(1.05);
+    }
+
+    .explore-item img:hover {
+      transform: scale(1.1);
+    }
+
+    .explore-item__content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #c01e1e;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .explore-item:hover .explore-item__content {
+      opacity: 1;
+    }
+
+    .explore-item__content h5 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .explore-item__content p {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .btn-outline-secondary {
+      border-color: #e85965;
+      color: #e85965;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-secondary:hover {
+      background-color: #e85965;
+      color: white;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 767px) {
+      .explore-item {
+        max-width: 100%;
+        height: 250px; /* Adjust height for smaller screens */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg px-4">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="Grandma's Sweet Shop"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+        <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNav">
+        <ul class="navbar-nav mx-auto text-capitalize">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="item.html">Explore</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Explore Section -->
+  <section class="explore py-5" id="explore">
+    <div class="container">
+      <h1 class="text-capitalize">Explore <strong class="banner-title">Our Delicious Items</strong></h1>
+      <p class="mb-5">Indulge in our wide selection of sweet treats that are sure to make your day a little brighter. From cakes to cupcakes and doughnuts, each item is crafted with love and the finest ingredients passed down from generation to generation.</p>
+
+      <!-- Explore Items Grid -->
+      <div class="explore-item__container">
+        <!-- Explore Item 1 -->
+        <div class="explore-item">
+          <img src="img-cart/chococake.jpg" alt="Delicious Chocolate Cake">
+          <div class="explore-item__content">
+            <h5>Chocolate Cake</h5>
+            <p>Rich, moist, and indulgent chocolate cake topped with velvety chocolate frosting.</p>
+          </div>
+        </div>
+
+        <!-- Explore Item 2 -->
+        <div class="explore-item">
+          <img src="img-cart/vanila.jpg" alt="Vanilla Cupcake">
+          <div class="explore-item__content">
+            <h5>Vanilla Cupcake</h5>
+            <p>Fluffy, light vanilla cupcakes topped with sweet buttercream frosting.</p>
+          </div>
+        </div>
+
+        <!-- Explore Item 3 -->
+        <div class="explore-item">
+          <img src="img-cart/freshdonut.jpg" alt="Fresh Doughnuts">
+          <div class="explore-item__content">
+            <h5>Fresh Doughnuts</h5>
+            <p>Crispy on the outside, soft and warm on the inside. The perfect treat for any time of day!</p>
+          </div>
+        </div>
+
+        <!-- Explore Item 4 -->
+        <div class="explore-item">
+          <img src="img-cart/cokees.jpg" alt="Homemade Cookies">
+          <div class="explore-item__content">
+            <h5>Homemade Cookies</h5>
+            <p>Freshly baked with love, our cookies are chewy, sweet, and perfect with a cup of tea.</p>
+          </div>
+        </div>
+
+        <!-- Explore Item 5 -->
+        <div class="explore-item">
+          <img src="img-cart/flakypastry.jpg" alt="Flaky Pastry">
+          <div class="explore-item__content">
+            <h5>Flaky Pastry</h5>
+            <p>Buttery, flaky pastries filled with sweet fruit fillings that melt in your mouth.</p>
+          </div>
+        </div>
+
+        <!-- Explore Item 6 -->
+        <div class="explore-item">
+          <img src="img-cart/frutart.jpg" alt="Fruit Tart">
+          <div class="explore-item__content">
+            <h5>Fruit Tart</h5>
+            <p>A delicious buttery tart crust filled with rich custard and topped with fresh seasonal fruits.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#store" class="btn btn-outline-secondary text-uppercase mt-4">Visit Our Store</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center py-4">
+      <p>&copy; 2024 Grandma's Sweet Shop. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

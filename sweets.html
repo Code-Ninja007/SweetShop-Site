@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <title>Sweets Gallery</title>
+  <style>
+    /* Custom CSS for Sweets Hover Animation */
+    .store-item {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .store-item:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .store-item .img-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .store-item .store-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .store-item .store-item-icon {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .store-item:hover .store-item-icon {
+      opacity: 1;
+    }
+
+    .store-item .card-body {
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .store-item:hover .card-body {
+      opacity: 1;
+    }
+
+    .store-item .card-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .store-item .store-item-value {
+      font-weight: bold;
+    }
+
+    .lightbox-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .lightbox-item {
+      max-width: 600px;
+      max-height: 600px;
+      margin: 0 15px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .lightbox-control {
+      position: absolute;
+      top: 50%;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .btnLeft {
+      left: 10px;
+    }
+
+    .btnRight {
+      right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg px-4">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+        <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNav">
+        <ul class="navbar-nav mx-auto text-capitalize">
+          <li class="nav-item active"><a class="nav-link" href="#">home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">about</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">store</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Store Section -->
+  <section id="store" class="store py-5">
+    <div class="container">
+      <!-- Section Title -->
+      <div class="row">
+        <div class="col-10 mx-auto col-sm-6 text-center">
+          <h1 class="text-capitalize">our <strong class="banner-title ">sweets</strong></h1>
+        </div>
+      </div>
+
+      <!-- Sweets Grid -->
+      <div class="row">
+        <!-- Single Sweet Item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/tart-1.jpeg" class="card-img-top store-img" alt="Fruit Tart">
+              <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
+            </div>
+            <div class="card-body">
+              <div class="card-text">
+                <h5 class="store-item-name">Fruit Tart</h5>
+                <h5 class="store-item-value">$ 8</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Sweet Item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/pie-1.jpeg" class="card-img-top store-img" alt="Apple Pie">
+              <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
+            </div>
+            <div class="card-body">
+              <div class="card-text">
+                <h5 class="store-item-name">Apple Pie</h5>
+                <h5 class="store-item-value">$ 10</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Sweet Item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/custard-1.jpeg" class="card-img-top store-img" alt="Vanilla Custard">
+              <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
+            </div>
+            <div class="card-body">
+              <div class="card-text">
+                <h5 class="store-item-name">Vanilla Custard</h5>
+                <h5 class="store-item-value">$ 6</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Sweet Item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/tart-2.jpeg" class="card-img-top store-img" alt="Lemon Tart">
+              <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
+            </div>
+            <div class="card-body">
+              <div class="card-text">
+                <h5 class="store-item-name">Lemon Tart</h5>
+                <h5 class="store-item-value">$ 7.5</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Sweet Item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/pie-2.jpeg" class="card-img-top store-img" alt="Cherry Pie">
+              <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
+            </div>
+            <div class="card-body">
+              <div class="card-text">
+                <h5 class="store-item-name">Cherry Pie</h5>
+                <h5 class="store-item-value">$ 9</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Sweet Item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/custard-2.jpeg" class="card-img-top store-img" alt="Chocolate Custard">
+              <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
+            </div>
+            <div class="card-body">
+              <div class="card-text">
+                <h5 class="store-item-name">Chocolate Custard</h5>
+                <h5 class="store-item-value">$ 7</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox for images -->
+  <div class="lightbox-container">
+    <span class="lightbox-close">&times;</span>
+    <div class="lightbox-control btnLeft"><i class="fas fa-chevron-left"></i></div>
+    <div class="lightbox-control btnRight"><i class="fas fa-chevron-right"></i></div>
+    <img src="" class="lightbox-item">
+  </div>
+
+  <!-- Bootstrap JS, Popper, and jQuery -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <title>Grandma's Sweet Shop | About Us</title>
+  <style>
+    /* About Section Custom Styles */
+    .about {
+      padding: 5rem 0;
+      background-color: #f8f9fa;
+    }
+
+    .about h1 {
+      font-size: 3rem;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .about .banner-title {
+      color: #e85965;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #6c757d;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .about p:hover {
+      color: #343a40;
+      font-size: 1.25rem;
+    }
+
+    .about-img__container img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .about-img__container img:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-outline-secondary {
+      border-color: #e85965;
+      color: #e85965;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-secondary:hover {
+      background-color: #e85965;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg px-4">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="Grandma's Sweet Shop"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+        <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNav">
+        <ul class="navbar-nav mx-auto text-capitalize">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about py-5" id="about">
+    <div class="container">
+      <div class="row">
+        <!-- Left Column -->
+        <div class="col-12 col-md-6 my-5">
+          <h1 class="text-capitalize">About <strong class="banner-title">Grandma's Sweet Shop</strong></h1>
+          <p class="my-4">
+            Grandma's Sweet Shop was founded in 1945 by Margaret "Grandma" Wilson, a passionate baker known for her
+            delicious and unforgettable treats. What began as a small home-based bakery quickly grew into the beloved
+            institution it is today. For over seven decades, we've been delighting the community with our fresh cakes,
+            cupcakes, doughnuts, and other sweet treats.
+          </p>
+          <p>
+            Our shop holds a special place in the hearts of our loyal customers. Whether it's the warm scent of freshly
+            baked goods filling the air or the cozy, welcoming atmosphere, every visit feels like a trip back in time.
+            At Grandma's Sweet Shop, we pride ourselves on using only the finest ingredients, passed down from
+            generation to generation.
+          </p>
+          <p>
+            We invite you to explore our wide selection of sweet treats, each crafted with love and care, just like
+            Grandma would have wanted. Come taste the tradition that has kept our customers coming back for more!
+          </p>
+          <a href="item.html" class="btn btn-outline-secondary text-uppercase">Explore Our Store</a>
+        </div>
+
+        <!-- Right Column (Image) -->
+        <div class="col-12 col-md-6 align-self-center my-5">
+          <div class="about-img__container">
+            <img src="img/interior.jpg" class="img-fluid" alt="Grandma's Sweet Shop Interior">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center py-4">
+      <p>&copy; 2024 Grandma's Sweet Shop. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
